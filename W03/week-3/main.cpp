@@ -1,6 +1,7 @@
 #include <iostream>
-
+#include "Point.h"
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    auto *point = new Point(1, 3);
+    std::cout << point->getX() << " " << point->getY() << std::endl;
     return 0;
 }
