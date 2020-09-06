@@ -7,6 +7,12 @@
 
 
 class DynamicArray {
+private:
+    int *arr;
+    int length;
+    int capacity;
+
+public:
 
 };
 
