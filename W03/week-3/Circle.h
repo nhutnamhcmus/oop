@@ -4,7 +4,8 @@
 
 #ifndef WEEK_3_CIRCLE_H
 #define WEEK_3_CIRCLE_H
-#include <math.h>
+
+#include <cmath>
 #include "Point.h"
 
 class Circle {
@@ -23,7 +24,9 @@ public:
     void setRadius(double radius);
 
     [[nodiscard]] double area() const;
+
     [[nodiscard]] double perimeter() const;
+
     [[nodiscard]] double diameter() const;
 };
 
