@@ -7,7 +7,24 @@
 
 
 class Fraction {
+private:
+    int numerator{};
+    int denominator{};
 
+public:
+    // constructors
+    Fraction();
+
+    Fraction(int numerator, int denominator);
+
+    // getters and setters
+    [[nodiscard]] int getNumerator() const;
+
+    void setNumerator(int numerator);
+
+    [[nodiscard]] int getDenominator() const;
+
+    void setDenominator(int denominator);
 };
 
 
