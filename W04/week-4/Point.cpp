@@ -38,4 +38,8 @@ Point& Point::operator=(const Point &another) {
     return *this;
 }
 
+Point::Point(const Point &another) {
+    *this = another;
+}
+
 Point::~Point() = default;

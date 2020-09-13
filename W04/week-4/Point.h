@@ -20,6 +20,8 @@ public:
 
     Point();
 
+    Point(const Point&);
+
     ~Point();
     // getters and setters
     [[nodiscard]] double getX() const;

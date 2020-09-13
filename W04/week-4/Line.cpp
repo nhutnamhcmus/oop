@@ -12,12 +12,12 @@ void Line::setStart(const Point &start) {
     Line::start = start;
 }
 
-const Point &Line::getAnEnd() const {
+const Point &Line::getEnd() const {
     return end;
 }
 
-void Line::setAnEnd(const Point &anEnd) {
-    end = anEnd;
+void Line::setEnd(const Point &End) {
+    end = End;
 }
 
 double Line::getLength() const {
@@ -40,6 +40,19 @@ Line::Line() {
 Line::Line(Point *start, Point *end) {
     this->start = *start;
     this->end = *end;
+    this->length = this->start.calculateDistanceTo(this->end);
+}
+
+Line::Line(const Line &another) {
+    *this = another;
+    this->length = this->start.calculateDistanceTo(this->end);
+}
+
+Line &Line::operator=(const Line &another) {
+    this->start = another.getStart();
+    this->end = another.getEnd();
+    this->length = this->start.calculateDistanceTo(this->end);
+    return *this;
 }
 
 Line::~Line() = default;

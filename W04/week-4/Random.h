@@ -7,7 +7,14 @@
 
 
 class Random {
+public:
+    Random();
 
+    static int generate();
+
+    int Next();
+
+    int Next(int max);
 };
 
 

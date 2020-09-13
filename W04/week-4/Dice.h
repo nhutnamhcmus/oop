@@ -7,7 +7,13 @@
 
 
 class Dice {
+public:
+    Dice();
 
+    int Roll();
+
+public:
+    unsigned int _rollCount;
 };
 
 
