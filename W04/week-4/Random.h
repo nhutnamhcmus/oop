@@ -12,6 +12,8 @@ public:
 
     static int generate();
 
+    static int generate(int a, int b);
+
     int Next();
 
     int Next(int max);
