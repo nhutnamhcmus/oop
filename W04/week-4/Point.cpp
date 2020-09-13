@@ -4,9 +4,9 @@
 
 #include "Point.h"
 
-Point::Point(double x, double y) : x(x), y(y) {}
+Point::Point(double x, double y) : x(x), y(y) {  }
 
-Point::Point() : x(0), y(0) {}
+Point::Point() : x(0), y(0) { }
 
 double Point::getX() const {
     return x;
@@ -30,6 +30,12 @@ double Point::calculateDistanceTo(const Point &another) const {
 
 double Point::calculateDistance(const Point &first_point, const Point &second_point) {
     return first_point.calculateDistanceTo(second_point);
+}
+
+Point& Point::operator=(const Point &another) {
+    this->setX(another.getX());
+    this->setY(another.getY());
+    return *this;
 }
 
 Point::~Point() = default;

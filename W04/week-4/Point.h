@@ -33,6 +33,8 @@ public:
     [[nodiscard]] double calculateDistanceTo(const Point &another) const;
 
     [[nodiscard]] static double calculateDistance(const Point&, const Point&);
+
+    Point& operator=(const Point&);
 };
 
 
