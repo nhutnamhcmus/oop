@@ -7,7 +7,27 @@
 
 
 class Point {
+public:
+    static int instanceCount;
+private:
+    float _x{};
+    float _y{};
 
+public:
+    [[nodiscard]] float getX() const;
+
+    void setX(float x);
+
+    [[nodiscard]] float getY() const;
+
+    void setY(float y);
+
+    Point(const float &x, const float &y);
+    Point();
+    ~Point();
+    Point(const Point&);
+
+    Point& operator=(const Point&);
 };
 
 
