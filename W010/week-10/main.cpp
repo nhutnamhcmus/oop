@@ -1,6 +1,8 @@
 #include <iostream>
+#include "MixedFraction.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    MixedFraction f(12, 9);
+    std::cout << f.toString() << "\n";
     return 0;
 }
