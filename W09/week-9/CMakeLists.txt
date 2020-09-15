@@ -3,4 +3,4 @@ project(week_9)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(week_9 main.cpp)
+add_executable(week_9 main.cpp Fraction.cpp Fraction.h Utils.h Tokenizer.h)
