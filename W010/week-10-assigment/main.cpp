@@ -1,6 +1,11 @@
 #include <iostream>
+#include "Cabriolet.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+
+    Vehicle * car = new Cabriolet();
+    car->StartEngine();
+
+    delete car;
     return 0;
 }

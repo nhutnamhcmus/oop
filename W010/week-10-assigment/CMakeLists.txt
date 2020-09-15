@@ -3,4 +3,4 @@ project(week_10_assigment)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(week_10_assigment main.cpp)
+add_executable(week_10_assigment main.cpp Car.h Cabriolet.h Vehicle.h)
