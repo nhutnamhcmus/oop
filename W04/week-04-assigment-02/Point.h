@@ -8,26 +8,38 @@
 
 class Point {
 public:
+
     static int instanceCount;
 private:
-    float _x{};
-    float _y{};
+    double _x;
+    double _y;
 
 public:
-    [[nodiscard]] float getX() const;
+    // getters and setters method
+    [[nodiscard]] double getX() const;
 
-    void setX(float x);
+    void setX(double x);
 
-    [[nodiscard]] float getY() const;
+    [[nodiscard]] double getY() const;
 
-    void setY(float y);
+    void setY(double y);
 
-    Point(const float &x, const float &y);
+    // constructor
+    Point(const double &x, const double &y);
     Point();
-    ~Point();
     Point(const Point&);
 
+    // destructor
+    ~Point();
+
+    // overloading assigment operator
     Point& operator=(const Point&);
+
+    // class activities
+    [[nodiscard]] double calculateDistanceTo(const Point &another) const;
+
+    // static method
+    [[nodiscard]] static double calculateDistance(const Point&, const Point&);
 };
 
 

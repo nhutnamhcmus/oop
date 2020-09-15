@@ -3,8 +3,9 @@
 //
 
 #include "Point.h"
+#include <cmath>
 
-Point::Point(const float &x, const float &y) : _x(x), _y(y) {}
+Point::Point(const double &x, const double &y) : _x(x), _y(y) {}
 
 Point::Point() = default;
 
@@ -17,20 +18,29 @@ Point::~Point() = default;
 Point &Point::operator=(const Point &another) {
     this->setX(another.getX());
     this->setY(another.getY());
+    return *this;
 }
 
-float Point::getX() const {
+double Point::getX() const {
     return _x;
 }
 
-void Point::setX(float x) {
+void Point::setX(double x) {
     _x = x;
 }
 
-float Point::getY() const {
+double Point::getY() const {
     return _y;
 }
 
-void Point::setY(float y) {
+void Point::setY(double y) {
     _y = y;
+}
+
+double Point::calculateDistanceTo(const Point &another) const {
+    return sqrt(pow(Point::getX() - another.getX(), 2) + pow(Point::getY() - another.getY(), 2));
+}
+
+double Point::calculateDistance(const Point &first_point, const Point &second_point) {
+    return first_point.calculateDistanceTo(second_point);
 }
