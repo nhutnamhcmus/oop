@@ -7,7 +7,8 @@
 
 
 class Line {
-
+public:
+    static int instanceCount;
 };
 
 

@@ -7,7 +7,8 @@
 
 
 class Fraction {
-
+public:
+    static int instanceCount;
 };
 
 

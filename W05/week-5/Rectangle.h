@@ -7,7 +7,8 @@
 
 
 class Rectangle {
-
+public:
+    static int instanceCount;
 };
 
 

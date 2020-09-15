@@ -7,7 +7,8 @@
 
 
 class Triangle {
-
+public:
+    static int instanceCount;
 };
 
 

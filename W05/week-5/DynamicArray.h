@@ -7,7 +7,8 @@
 
 
 class DynamicArray {
-
+public:
+    static int instanceCount;
 };
 
 
